@@ -16,4 +16,21 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
  * Add your own custom css below this text.
  */
 
- 
+ // ESSENCIAIS
+
+ @import "essenciais/geral.scss";
+ @import "essenciais/variaveis.scss";
+ @import "essenciais/classes.scss";
+
+ // LAYOUT
+
+ @import "layout/container.scss";
+
+ // COMPONENTES
+
+ @import "componentes/header.scss";
+ @import "componentes/footer.scss";
+
+ // PAGINAS
+
+ @import "paginas/home.scss";

@@ -23,4 +23,21 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
+ function artm_theme_scripts() {
+
+    //Bootstrap css
+    wp_register_style('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css", array() , '5.2.2', 'all');
+
+    // Tema principal css
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array('bootstrap'), '1.0.0', 'all');
+
+    // Bootstrap js
+    wp_enqueue_script('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js", 'jquery', '5.2.2');
+    
+    // Custom js
+    wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/assets/js/custom.min.js', 'jquery', '1.0.0');
+ }
+
+ add_action('wp_enqueue_scripts', 'artm_theme_scripts', 9999);
+
 

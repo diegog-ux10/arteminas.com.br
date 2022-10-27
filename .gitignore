@@ -10,16 +10,20 @@
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet
+/wp-content/plugins/show-current-template
+/wp-content/plugins/woocommerce
+/wp-content/plugins/akismet
+/wp-content/plugins/advanced-custom-fields-pro
 /wp-content/themes/index.php
 /wp-content/themes/storefront/vendor
 /wp-content/themes/storefront
-/wp-content/themes/arteminas-storefront-child-theme-master/storefront-child-theme-master/assets/dev/node_modules
 /wp-includes/
 /index.php
 /license.txt
 /readme.html
 /wp-*.php
 /xmlrpc.php
+
 
 # Configuration
 # wp-config.php
@@ -47,3 +51,4 @@
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+wp-content/themes/arteminas-storefront-child-theme-master/storefront-child-theme-master/assets/dev/node_modules/

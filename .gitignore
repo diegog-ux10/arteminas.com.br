@@ -13,11 +13,6 @@
 /wp-content/themes/index.php
 /wp-content/themes/storefront/vendor
 /wp-includes/
-# /index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
 
 # Configuration
 wp-config.php

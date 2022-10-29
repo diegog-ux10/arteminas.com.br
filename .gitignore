@@ -9,11 +9,9 @@
 /wp-content/index.php
 /wp-content/languages
 /wp-content/plugins/index.php
-/wp-content/plugins/akismet
 /wp-content/plugins/show-current-template
 /wp-content/plugins/woocommerce
 /wp-content/plugins/akismet
-# /wp-content/plugins/advanced-custom-fields-pro
 /wp-content/themes/index.php
 /wp-content/themes/storefront/vendor
 /wp-content/themes/storefront

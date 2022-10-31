@@ -1,0 +1,33 @@
+// CAROUSEL
+//---------
+
+.carousel-full-container, .products-full-container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .products-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .carousel, .products {
+        .carousel-inner, .products-inner {
+            .carousel-item, .products-item {
+                display: flex;
+                justify-content: space-between;
+                .product-card {
+                    width: 22%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    a {
+                        img {
+                            width: 100%;
+                            aspect-ratio: 1/1.2;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

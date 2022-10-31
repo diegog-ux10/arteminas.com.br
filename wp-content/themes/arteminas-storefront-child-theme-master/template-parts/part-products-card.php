@@ -1,58 +1,45 @@
-<?php
-$is_carousel = $args["is_carousel"];
-
-?>
-
 <?php 
+/**
+ * Converter argumentos do template-part em variáveis
+ */
+
+$is_carousel = $args["is_carousel"];
+$query = $args["query"];
+$title = $args["title"];
+
+/**
+ * Incluindo a consulta necessária
+ */
+
+$query ? include get_stylesheet_directory() . "/inc/query-prod-card-$query.php" : null; 
+
+/**
+ * Definindo classes e atributos dependendo se é carrossel ou não
+ */
+
 if($is_carousel):
+    $full_container_atrib = 'class="carousel-full-container"';
     $main_container_atrib = 'id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel"';
     $second_container_atrib = 'class="carousel-inner"';
+    $carousel_item_atrib = 'class="carousel-item active"';
 else:
-    $main_container_atrib = '';
-    $second_container_atrib = '';
+    $full_container_atrib = 'class="products-full-container"';
+    $main_container_atrib = 'class="products"';
+    $second_container_atrib = 'class="products-inner"';
+    $carousel_item_atrib = 'class="products-item"';
 endif;
+
 ?>
 
-<?php
-$prod_bsr_1st_set = array(
-    'posts_per_page' => 4,
-    'post_type' => 'product',
-    'orderby' => 'date',
-    'order' => 'ASC'
-);
-
-$prod_bsr_1st = new WP_Query($prod_bsr_1st_set);
-
-if($is_carousel):
-    $prod_bsr_2nd_set = array(
-        'posts_per_page' => 4,
-        'post_type' => 'product',
-        'offset' => 4,
-        'orderby' => 'date',
-        'order' => 'ASC'
-    );
-
-    $prod_bsr_2nd = new WP_Query($prod_bsr_2nd_set);
-
-    $prod_bsr_3rd_set = array(
-        'posts_per_page' => 4,
-        'post_type' => 'product',
-        'offset' => 8,
-        'orderby' => 'date',
-        'order' => 'ASC'
-    );
-
-    $prod_bsr_3rd = new WP_Query($prod_bsr_3rd_set);
-endif;
-?>
-
-<div>
+<div <?= $full_container_atrib; ?>>
    <div class="products-title">
         <div>
-            <h3>Cards title</h3>
+            <h3 class="text-l-black"><?= $title ?></h3>
         </div>  
-        <?php if($is_carousel): ?>              <!-- Recipiente do controlador carrossel -->
+        <?php if($is_carousel): // mostrar controle de carrossel?>              
+            <!-- Recipiente do controlador carrossel -->
             <div>
+                <!-- controles de carrossel -->
                 <a href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
                     <i class="fa fa-arrow-left"></i>
                 </a>
@@ -62,26 +49,24 @@ endif;
             </div>
         <?php endif; ?>
     </div>
+    <!-- seção de cartão de produto -->
     <div <?= $main_container_atrib; ?>>
         <div <?= $second_container_atrib; ?>>
-            <?php if(have_posts($prod_bsr_1st)): ?>
-                <div class="carousel-item active">
-                    <div>
-                        <?php while ($prod_bsr_1st->have_posts()) : $prod_bsr_1st->the_post(); ?>
+            <?php if(have_posts($prod_1)): ?>
+                <div <?= $carousel_item_atrib ?>>
+                    <?php while ($prod_1->have_posts()) : $prod_1->the_post(); ?>
+                        <div class="product-card">
+                            <a href="<?php the_permalink(); ?>"><img class="img-fluid" alt="<?php the_title(); ?>" src="<?= get_the_post_thumbnail_url(); ?>"></a>
                             <div>
-                            <div>
-                                <img class="img-fluid" alt="100%x280" src="<?= get_the_post_thumbnail_url(); ?>">
-                                <div>
-                                    <h4><?php the_title(); ?></h4>
-                                    <?php $product = new WC_Product($post); ?>
-                                    <span>R$<?= $product->get_price(); ?></span>
-                                </div>
+                                <a href="<?php the_permalink(); ?>"><h4 class="text-m-purple"><?php the_title(); ?></h4></a>
+                                <?php $product = new WC_Product($post); ?>
+                                <span class="text-m-green">R$<?= $product->get_price(); ?></span>
                             </div>
-                        </div> 
+                        </div>
                     <?php endwhile; ?>
-                </div>
-            </div>
-        <?php endif; ?>
+                </div>       
+            <?php endif; ?>
+        </div>
     </div>
 </div>  
 

@@ -1,0 +1,26 @@
+// TEXT
+// ----
+
+.text-m-purple {
+    color: $color-purple;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-m-green {
+    color: $color-green;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .text-m-purple, .text-m-green {
+        font-size: calc(4vw);
+    }
+}
+
+.text-l-black {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-black;
+}

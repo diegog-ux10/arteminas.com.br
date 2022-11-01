@@ -1,2 +1,29 @@
 // HEADER STYLES
 // -------------
+
+#masthead {
+    margin: 0;
+    border: 0;
+}
+
+.collapse.navbar-collapse {
+    justify-content: flex-end;
+    .nav.navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+        li {
+            a {
+                color: $color-black;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            a:hover {
+                color: $color-purple;
+                transition: 1s;
+            }
+        }
+    }
+}

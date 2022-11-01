@@ -1,0 +1,36 @@
+.category-cards {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    .category-card {
+        width: 32%;
+        aspect-ratio: 1/1.2;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow:inset 0 0 0 2000px rgba(112, 14, 30, 0.7);
+
+        a {
+            h3 {
+                text-transform: uppercase;
+            }
+        }
+
+        .overlay {
+            span {
+
+            }
+        }
+    }
+
+    .category-card:hover {
+        box-shadow:inset 0 0 0 2000px rgba(112, 14, 30, 0.2);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+}

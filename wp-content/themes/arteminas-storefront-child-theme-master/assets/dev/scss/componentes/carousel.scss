@@ -20,13 +20,42 @@
                     flex-direction: column;
                     gap: 12px;
                     a {
+                        position: relative;
                         img {
                             width: 100%;
                             aspect-ratio: 1/1.2;
                             object-fit: cover;
                         }
+
+                        .overlay {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 100%;
+                                width: 100%;
+                                opacity: 0;
+                                transition: .9s ease;
+                                background-color: rgba(112, 14, 30, 0.7);
+                                z-index: 1;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            span {
+                                
+                            }
+                        }
+
+                        .overlay:hover {
+                            opacity: 1;
+                        }
                     }
                 }
+            }
+
+            .carousel-item:not(.active) {
+               display: none;
             }
         }
     }

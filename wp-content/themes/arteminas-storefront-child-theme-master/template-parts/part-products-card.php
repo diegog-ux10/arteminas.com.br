@@ -8,7 +8,7 @@ $query = $args["query"];
 $title = $args["title"];
 
 /**
- * Incluindo a consulta necessária
+ * Incluindo a consulta[query] necessária
  */
 
 $query ? include get_stylesheet_directory() . "/inc/query-prod-card-$query.php" : null; 
@@ -53,24 +53,66 @@ endif;
     <div <?= $main_container_atrib; ?>>
         <div <?= $second_container_atrib; ?>>
             <?php if(have_posts($prod_1)): ?>
-                <div <?= $carousel_item_atrib ?>>
+                <div class="carousel-item active">
                     <?php while ($prod_1->have_posts()) : $prod_1->the_post(); ?>
                         <div class="product-card">
-                            <a href="<?php the_permalink(); ?>"><img class="img-fluid" alt="<?php the_title(); ?>" src="<?= get_the_post_thumbnail_url(); ?>"></a>
+                            <a href="<?php the_permalink(); ?>">
+                                <img class="img-fluid" alt="<?php the_title(); ?>" src="<?= get_the_post_thumbnail_url(); ?>">
+                                <div class="overlay">
+                                    <span class="text-m-white">Ver Produto</span>
+                                </div>
+                            </a>
                             <div>
                                 <a href="<?php the_permalink(); ?>"><h4 class="text-m-purple"><?php the_title(); ?></h4></a>
                                 <?php $product = new WC_Product($post); ?>
                                 <span class="text-m-green">R$<?= $product->get_price(); ?></span>
-                            </div>
+                            </div>                            
                         </div>
                     <?php endwhile; ?>
                 </div>       
             <?php endif; ?>
+
+            <?php 
+                if($is_carousel): ?>
+                    <?php if(have_posts($prod_2)): ?>
+                        <div class="carousel-item">
+                            <?php while ($prod_2->have_posts()) : $prod_2->the_post(); ?>
+                                <div class="product-card">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img class="img-fluid" alt="<?php the_title(); ?>" src="<?= get_the_post_thumbnail_url(); ?>">
+                                        <div class="overlay">
+                                            <span class="text-m-white">Ver Produto</span>
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <a href="<?php the_permalink(); ?>"><h4 class="text-m-purple"><?php the_title(); ?></h4></a>
+                                        <?php $product = new WC_Product($post); ?>
+                                        <span class="text-m-green">R$<?= $product->get_price(); ?></span>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>       
+                    <?php endif; ?>
+                    <?php if(have_posts($prod_3)): ?>
+                        <div class="carousel-item">
+                            <?php while ($prod_3->have_posts()) : $prod_3->the_post(); ?>
+                                <div class="product-card">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img class="img-fluid" alt="<?php the_title(); ?>" src="<?= get_the_post_thumbnail_url(); ?>">
+                                        <div class="overlay">
+                                            <span class="text-m-white">Ver Produto</span>
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <a href="<?php the_permalink(); ?>"><h4 class="text-m-purple"><?php the_title(); ?></h4></a>
+                                        <?php $product = new WC_Product($post); ?>
+                                        <span class="text-m-green">R$<?= $product->get_price(); ?></span>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>       
+                    <?php endif; ?>
+               <?php endif; ?>
         </div>
     </div>
-</div>  
-
 </div>
-
-
-

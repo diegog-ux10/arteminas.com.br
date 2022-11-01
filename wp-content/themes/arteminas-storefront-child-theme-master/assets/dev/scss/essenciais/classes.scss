@@ -13,6 +13,12 @@
     font-weight: 600;
 }
 
+.text-m-white {
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 @media (max-width: 992px) {
     .text-m-purple, .text-m-green {
         font-size: calc(4vw);
@@ -23,4 +29,10 @@
     font-size: 24px;
     font-weight: 700;
     color: $color-black;
+}
+
+.text-l-white {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-white;
 }

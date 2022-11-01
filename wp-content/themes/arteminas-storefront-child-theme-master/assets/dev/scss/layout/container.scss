@@ -4,7 +4,8 @@
 .full-container {
     width: 100%;
     height: fit-content;
-    padding-top: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .content-container-m {
@@ -15,8 +16,14 @@
 
 .content-container-l {
     width: 100%;
-    max-width: 1440 px;
+    max-width: 1440px;
     margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+    .content-container-l {
+        max-width: 1200px;
+    }
 }
 
 .flex {

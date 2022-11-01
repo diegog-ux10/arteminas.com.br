@@ -5,7 +5,6 @@
 $cat_01 = $args['cat_01'];
 $cat_02 = $args['cat_02'];
 $cat_03 = $args['cat_03'];
-
 /**
  * Incluindo a consulta[query] necessária
  */

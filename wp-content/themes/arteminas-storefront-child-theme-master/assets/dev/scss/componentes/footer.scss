@@ -1,0 +1,19 @@
+// Footer
+// -----
+
+footer {
+    .footer-container {
+        background-color: $color-purple;
+        .footer {
+            .top-footer {
+                display: flex;
+                justify-content: space-between;
+                .top-footer_column {
+                    .top-footer-column_title {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

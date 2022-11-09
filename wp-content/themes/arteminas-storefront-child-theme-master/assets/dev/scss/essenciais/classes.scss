@@ -42,3 +42,26 @@
     font-weight: 700;
     color: $color-white;
 }
+
+.text-l-gold {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-gold;
+}
+
+.text-l-green {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-green;
+}
+
+.text-l-purple {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-purple;
+}
+
+button.btn-green {
+    background-color: $color-green !important;
+    border-radius: 5px;
+}

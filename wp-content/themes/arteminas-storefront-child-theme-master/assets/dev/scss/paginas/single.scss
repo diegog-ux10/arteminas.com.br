@@ -1,0 +1,148 @@
+#primary {
+    background-color: $color-white;
+    #main {
+        .product {
+            .banner-title {
+                background-color: $color-purple;
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+
+            .single-product-container {
+                display: flex;
+                flex-direction: row;
+
+                .left-column {
+                    width: 70%;
+                    .product_meta {
+                        span {
+                            a {
+                                color: $color-green;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .summary.entry-summary {
+                        form.cart {
+                            div.quantity {
+                                input::-webkit-inner-spin-button {
+                                    background-color: $color-green;
+                                    color: aqua;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right-column {
+                    width: 30%;
+                    padding-left: 32px;
+                    margin-left: 32px;
+                    border-left: 1px solid rgba(0,0,0,.05) !important;
+
+                    div.single-cart, div.single-categories, div.single-search {
+                        border-bottom: 1px solid rgba(0,0,0,.05) !important;
+                        padding-bottom: 32px;
+                        margin-bottom: 32px;
+                    }
+
+                    div {
+                        h3 {
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 18px;
+                            color: $color-purple;
+                            margin-bottom: 32px;
+                        }
+                    }
+
+                    div.single-cart_total {
+                        .single-cart_title {
+                            margin-bottom: 0;
+                            margin-top: 32px;
+                        }
+                    }
+
+                    div.single-categories {
+                        ul.single-categories_list {
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    color: $color-purple;
+                                    font-size: 12px;
+                                    font-weight: 600;
+
+                                }
+                            }
+                        }
+                    }
+
+                    div.single-search {
+                        form.woocommerce-product-search {
+                            display: flex !important;
+                            gap: 8px;
+                            button {
+                                background-color: $color-green;
+                                border-radius: 5px;
+                                 color: $color-white;
+                            }
+
+                            input {
+                                border-radius: 0px;
+                                background-color: #F2F6F9;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                }
+
+        }
+    }
+}
+
+}
+
+.storefront-sticky-add-to-cart__content {
+    .storefront-sticky-add-to-cart__content-button {
+        background-color: $color-green !important;
+        border-radius: 5px;
+    }
+}
+
+.related.products {
+    h2 {
+        text-align: start !important;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    .products {
+        li {
+            a {
+                 img::before {
+                    content: 'Ver Produto';
+                 }
+
+                h2 {
+                    color: $color-black;
+                    font-size: 16px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                }
+                span.price {
+                     display: none !important;
+                 }
+                 .star-rating {
+                    display: none !important;
+                 }
+            }
+
+            a.button {
+                display: none !important;
+                
+            }
+        }
+    }
+    
+}

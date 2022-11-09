@@ -11,6 +11,27 @@ footer {
                 .top-footer_column {
                     .top-footer-column_title {
                         text-transform: uppercase;
+                        margin-bottom: 32px;
+                    }
+                    span {
+                        display: flex;
+                        gap: 18px;
+                        margin-bottom: 12px;
+                    }
+
+                    #menu-footer {
+                        .menu-item {
+                            color: white;
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .top-footer_column {
+                    .social-media {
+                        display: flex;
+                        gap: 18px;
                     }
                 }
             }

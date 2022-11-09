@@ -93,7 +93,7 @@ endif;
                             <?php endwhile; ?>
                         </div>       
                     <?php endif; ?>
-                    <?php if(have_posts($prod_3)): ?>
+                    <?php if(false): ?>
                         <div class="carousel-item">
                             <?php while ($prod_3->have_posts()) : $prod_3->the_post(); ?>
                                 <div class="product-card">

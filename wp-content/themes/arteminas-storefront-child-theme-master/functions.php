@@ -64,4 +64,3 @@ function prefix_modify_nav_menu_args( $args ) {
 }
 
 add_filter( 'wp_nav_menu_args', 'prefix_modify_nav_menu_args' );
-

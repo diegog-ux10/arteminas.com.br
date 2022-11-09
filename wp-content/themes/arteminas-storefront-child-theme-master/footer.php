@@ -22,28 +22,41 @@
 					<div class="top-footer_column">
 						<h5 class="top-footer-column_title text-m-white">Arte Minas Queijos</h5>
 						<nav>
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
+							<?php wp_nav_menu(array(
+								'menu' => 'secondary',
+								'container'            => '',
+								'menu_class'           => 'menu-footer',
+								'menu_id'              => 'menu-footer',
+								'echo'                 => true,
+								'fallback_cb'          => 'wp_page_menu',
+								'before'               => '',
+								'after'                => '',
+								'link_before'          => '',
+								'link_after'           => '',
+								'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'item_spacing'         => 'preserve',
+								'depth'                => 0,
+								'walker'               => '',
+								'theme_location'       => '',								
+								)) 
+								?>
 						</nav>
 					</div>
 					<div class="top-footer_column">
 						<h5 class="top-footer-column_title text-m-white">Entre Em Contato</h5>
-						<span><i><img src="" alt=""></i></span>
-						<span><i><img src="" alt=""></i></span>
-						<span><i><img src="" alt=""></i></span>
-						<span><i><img src="" alt=""></i></span>
+						<span class="text-s-white"><i><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/ws-footer-icon.png' ?>" alt="Whatsapp Icon" height="20" width="20"></i>(49) 93300-2012</span>
+						<span class="text-s-white"><i><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/phone-footer-icon.png' ?>" alt="Whatsapp Icon" height="20" width="20"></i>(49) 93300-2012</span>
+						<span class="text-s-white"><i><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/main-footer-icon.png' ?>" alt="Whatsapp Icon" height="20" width="20"></i> contato@arteminasqueijos.com.br</span>
+						<span class="text-s-white"><i><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/place-footer-icon.png' ?>" alt="Whatsapp Icon" height="20" width="20"></i> <address>R. São Paulo 148 - Centro Barracão</address></span>
 					</div>
 					<div class="top-footer_column">
 						<h5 class="top-footer-column_title text-m-white">Acompanhe Nossas Redes</h5>
-						<a href=""><img src="" alt=""></a>
-						<a href=""><img src="" alt=""></a>
-						<a href=""><img src="" alt=""></a>
-						<a href=""><img src="" alt=""></a>
+						<div class="social-media">
+							<a href=""><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/fb-footer-icon.png' ?>" alt="Whatsapp Icon" height="30" width="30"></a>
+							<a href=""><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/ins-footer-icon.png' ?>" alt="Whatsapp Icon" height="30" width="30"></a>
+							<a href=""><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/pin-footer-icon.png' ?>" alt="Whatsapp Icon" height="30" width="30"></a>
+							<a href=""><img src="<?php echo get_stylesheet_directory_uri() . './assets/img/yt-footer-icon.png' ?>" alt="Whatsapp Icon" height="30" width="30"></a>
+						</div>						
 					</div>
 				</div>
 				<div class="bottom-footer">

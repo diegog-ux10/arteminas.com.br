@@ -1,0 +1,143 @@
+// // PAGE CONTACT
+// //--------------------------------------
+
+.fale-conosco-container {
+    justify-content: space-between;
+
+    .info-direction {
+        h2, p, a {
+            margin: 24px 0;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .form-container {
+        width: 70%;
+        margin: 0;
+        
+
+        .wpcf7 {
+
+            form {
+                .principal {
+                    padding: 12px 0;
+                    .top {
+                        label {
+                            font-size: 0.8em;
+                             font-family: $montserrat;
+                             width: 100%;
+
+                             input, select {
+                                width: 100%;
+                                height: 50px;
+                                border: 1px solid black;
+                                margin-top: 12px;
+                                margin-bottom: 24px;
+                                border: 1px solid $color-gray;
+                                padding-left: 10px;
+                             }
+                        }
+
+                        .email-telefono, .estado-cidade {
+                            display: flex;
+                            gap: 24px;
+                            height: fit-content;
+                        }
+                    }
+
+                    .bottom {
+                        label {
+                            font-size: 0.8em;
+                             font-family: $montserrat;
+                             width: 100%;
+
+                             textarea {
+                                margin-top: 12px;
+                                width: 100%;
+                                padding:10px;
+                             } 
+                        }
+                    }
+                }
+
+                
+
+            }
+        }
+    }
+}
+
+#wpcf7-f40-o1 > form > div.enviar {
+    display: flex;
+    justify-content: flex-end;
+    input {
+        height: 50px;
+        width: 230px;
+        border: none;
+        font-family: $montserrat;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+        background-color: $color-gray-two;
+        color: $color-white;
+        order: 2;
+    }
+}
+
+section.google-maps {
+    div {
+        h2 {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+#wpcf7-f40-o1 > form > div.principal > div.bottom > label > span > textarea {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    section.contacto.primary-container > div {
+        flex-direction: column;
+    }
+
+    body > section.contacto.primary-container > div > div.form-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 568px) {
+    #wpcf7-f40-o1 > form > div.principal > div.top > div.email-telefono, #wpcf7-f40-o1 > form > div.principal > div.top > div.estado-cidade {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .fale-conosco-container {    
+        
+        .form-container {
+            
+    
+            .wpcf7 {
+    
+                form {
+                    .principal {
+                        .top {
+                            label {
+    
+                                 input, select {
+                                    margin-bottom: 0;
+                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+
+    
+}

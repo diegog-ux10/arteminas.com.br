@@ -25,3 +25,9 @@ ul, ol {
 abbr {
     text-decoration: none !important;
 }
+
+p, span {
+    margin: 0;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+}

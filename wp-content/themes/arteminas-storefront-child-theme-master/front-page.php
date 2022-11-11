@@ -1,14 +1,8 @@
 <?php get_header(); ?>
 
-<div class="full-container">
-    <div class="content-container-m">
-        <?php get_template_part('template-parts/part', 'banner', [
-            'link' => get_field('banner_principal_link'),
-            'imagen' => get_field('banner_principal_imagen')
-            ]); ?> 
-    </div>    
-</div>
-
+<!-- Slider Home -->
+<?php get_template_part('template-parts/part', 'slider'); ?>
+<!-- carrousel do produtos -->
 <section class="full-container carousel">
     <div class="content-container-m">
         <?php get_template_part('template-parts/part', 'products-card', [
@@ -18,6 +12,7 @@
             ]); ?>
     </div>
 </section>
+
 <section class="full-container carousel">
     <div class="content-container-m">
         <?php get_template_part('template-parts/part', 'products-card', [
@@ -30,10 +25,7 @@
 
 <div class="full-container">
     <div class="content-container-m">
-        <?php get_template_part('template-parts/part', 'banner', [
-            'link' => get_field('banner_principal_link'),
-            'imagen' => get_field('banner_principal_imagen')
-            ]); ?> 
+        <?php echo get_field('banner'); ?> 
     </div>    
 </div>
 
@@ -46,5 +38,7 @@
         ]); ?>
     </div>
 </div>
+
+<?php echo do_shortcode('[featured_products]'); ?>
 
 <?php get_footer(); ?>

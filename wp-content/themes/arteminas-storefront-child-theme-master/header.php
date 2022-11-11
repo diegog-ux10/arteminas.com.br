@@ -16,7 +16,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -30,6 +33,18 @@
 	<?php do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
+        <div role="banner" class="full-container top-header">
+            <div class="content-container-m flex top-header_container">
+                <div>
+                    <p>Bem-vindo a loja da arte minas!</p>
+                </div>
+                <div>
+                <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+                    <a href="<?php echo wc_get_cart_url()?>">cart</a>
+                </div>
+            </div>
+        </div>
+        
         <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
             <div class="content-container-m flex">
             <!-- Brand and toggle get grouped for better mobile display -->
